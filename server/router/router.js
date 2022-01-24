@@ -1,4 +1,7 @@
-module.exports = function(app) {
+const ObjectId = require("mongodb").ObjectId;
+
+module.exports = function(app, myDataBase) {
+
     app.route("api/results")
         .get((req, res) => {
             res.send("Results table");
